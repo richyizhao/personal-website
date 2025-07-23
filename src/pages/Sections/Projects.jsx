@@ -29,7 +29,7 @@ import PostgreSQL from "/icons/PostgreSQL.svg";
 import PlayStore from "/icons/PlayStore.svg";
 import AppStore from "/icons/AppStore.svg";
 
-import Python from "/icons/Python.svg";         // Project 4 Icons. VGG Model Classifier For Rubbish {AI}
+import Python from "/icons/Python.svg";           // Project 4 Icons. Rubbish Classifier Model {AI}
 import Pytorch from "/icons/Pytorch.svg";
 import GoogleColaboratory from "/icons/GoogleColaboratory.svg";
 
