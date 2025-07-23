@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+  :root {
+    font-family: "Inter", "sans-serif";
+    font-feature-settings: "liga" 1, "calt" 1;
+  }
+  @supports (font-variation-settings: normal) {
+    :root { 
+      font-family: "InterVariable", "sans-serif"; 
+    }
+  }
+  html {
+    @apply scroll-smooth;
+  }
+  body {
+    @apply bg-zinc-950 text-zinc-400;
+  }
+  h2, h3 {
+    @apply text-white text-xl;
+  }
+  footer {
+    @apply self-end mt-8;
+  }
+  form {
+    @apply flex flex-col gap-4;
+  }
+  input, textarea {
+    @apply text-black focus:outline-none rounded-2xl p-4;
+  }
+  textarea {
+    @apply h-48 resize-none;
+  }
+  /* ---------- Layout Container ---------- */
+  .layout__container {
+    @apply flex gap-4 bg-zinc-950 max-w-[84rem] min-h-screen mx-auto relative;
+  }
+  /* ---------- Header Section ---------- */
+  header {
+    @apply flex flex-col flex-[0.4] sticky top-0 max-h-screen py-24 pl-12;
+  }
+  /* ---------- Main Section ---------- */
+  main {
+    @apply flex flex-col flex-[0.6] pr-12;
+  }
+  .section__title {
+    @apply hidden;
+  }
+}
+@layer components {
+  /* ----- Header Section ----- */
+  .header__container {
+    @apply mb-16;
+  }
+  .header__container > h1 {
+    @apply text-white text-5xl font-bold mb-2;
+  }
+  .header__container > p {
+    @apply mt-3;
+  }
+  nav {
+    @apply border-l border-zinc-800 pl-4 mb-16;
+  }
+  nav:nth-child(3) {
+    @apply mt-auto mb-0;
+  }
+  nav > ul {
+    @apply flex flex-col gap-8 list-none;
+  }
+  nav > ul > li > a {
+    @apply flex items-center w-12 relative;
+  }
+  nav > ul > li > a span {
+    @apply text-xs font-bold uppercase py-2 pl-10 pr-2 transition translate-x-0 ease-in absolute;
+  }
+  nav > ul > li > a:hover span,
+  li.active a span {
+    @apply text-white translate-x-4;
+  }
+  nav > ul > li > a:hover svg,
+  li.active a svg {
+    @apply text-white;
+  }
+  /* ----- About Section ----- */
+  #about {
+    @apply pt-24;
+  }
+  .about__card {
+    @apply border-l border-zinc-800 pl-4;
+  }
+  .about__card p {
+    @apply leading-6 mb-4;
+  }
+  .about__card p:nth-child(4) {
+    @apply mb-0;
+  }
+  .emphasis {
+    @apply text-white;
+  }
+  /* ----- Project Section ----- */
+  #projects {
+    @apply pt-24;
+  }
+  .projects__card__containers {
+    @apply flex flex-col gap-8;
+  }
+  .projects__card {
+    @apply flex gap-4 border rounded-2xl border-zinc-800 relative;
+  }
+  .projects__card__info {
+    @apply flex-1 py-4 pl-4;
+  }
+  .projects__card__info > p {
+    @apply mt-2 mb-4;
+  }
+  .projects__card__img {
+    @apply flex-1;
+  }
+  .projects__card__img > img {
+    @apply w-full h-full rounded-r-2xl object-cover;
+  }
+  .projects__card__img__links {
+    @apply flex gap-4 top-0 right-0 mt-4 mr-4 absolute;
+  }
+  .projects__card__img__links > a {
+    @apply inline-flex items-center gap-2 text-zinc-400;
+  }
+  .projects__card__img__links> a:hover {
+    @apply text-black;
+  }
+  /* ----- Skills Section ----- */
+  #skills {
+    @apply pt-24;
+  }
+  .skills__card__containers {
+    @apply flex flex-col gap-8;
+  }
+  .skills__card {
+    @apply border rounded-2xl border-zinc-800 p-4;
+  }
+  .skills__card > h3 {
+    @apply text-white text-xl;
+  }
+  .skills__card > p {
+    @apply mt-2 mb-4;
+  }
+  .technologies__container {
+    @apply flex flex-wrap gap-3;
+  }
+  .technologies__container img {
+    @apply w-6 h-6 object-contain;
+  }
+  .technologies__tag {
+    @apply flex items-center gap-1 rounded-lg p-1 bg-opacity-30;
+  }
+  /* ----- Contact Section ----- */
+  .contact__card__containers {
+    @apply flex flex-col justify-between h-screen py-24;
+  }
+  .contact__card {
+    @apply flex flex-col gap-4 border rounded-2xl border-zinc-800 p-4;
+  }
+  .contact__card__title {
+    @apply flex justify-between;
+  }
+  .contact__card__title > div {
+    @apply inline-flex items-center gap-2;
+  }
+  .contact__button {
+    @apply flex justify-center items-center gap-2 bg-white text-black focus:outline-none rounded-2xl py-4 px-8 transition translate-x-0 ease-in;
+  }
+  .contact__button:hover {
+    @apply transform scale-x-[1.01];
+  }
+  .contact__button:active {
+    @apply transform scale-x-[1.00];
+  }
+  /* ----- Thanks Section ----- */
+  .thanks__container {
+    @apply flex justify-center items-center h-screen;
+  }
+  .thanks__card {
+    @apply flex flex-col border rounded-2xl border-zinc-800 p-4;
+  }
+  .thanks__card > h1 {
+    @apply text-white text-5xl font-bold;
+  }
+  .thanks__card > p {
+    @apply mt-2 mb-4;
+  }
+}
+@layer utilities {
+  @media (max-width: 61.25rem) {
+    /* ---------- Layout Container ---------- */
+    .layout__container {
+      @apply flex flex-col;
+    }
+    /* ---------- Header Section ---------- */
+    header {
+      @apply static p-12 pb-0; 
+    }
+    .header__container {
+      @apply mb-0;
+    }
+    /* ---------- Main Section ---------- */
+    main {
+      @apply flex flex-col flex-[0.6] h-20 px-12; 
+    }
+    .section__title {
+      @apply block text-white text-lg mb-12; 
+    }
+    /* ----- Header Section ----- */
+    nav {
+      @apply hidden; 
+    }
+    /* ----- Projects Section ----- */
+    .projects__card {
+      @apply flex-col-reverse gap-0;
+    }
+    .projects__card__info {
+      @apply pr-4;
+    }
+    .projects__card__img > img {
+      @apply flex w-full h-full rounded-r-none rounded-t-2xl;
+    }
+    /* ----- Contact Section ----- */
+    #contact > h2 {
+      @apply pt-16; 
+    }
+    .contact__card__containers {
+      @apply h-[85vh] pt-0 pb-4;
+    }
+  }
+  @media (max-width: 30rem) {
+    /* ---------- Header Section ---------- */
+    header {
+      @apply p-12 px-4;
+    }
+    /* ---------- Main Section ---------- */
+    main {
+      @apply px-4;
+    }
+    /* ----- Contact Section ----- */
+    .contact__card__title > h3 > span,
+    .contact__card__title > div > p > span {
+      @apply hidden; 
+    }
+  }
+}
