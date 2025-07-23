@@ -17,26 +17,27 @@ function Contact() {
         </div>
         <form 
           name="contact" 
+          action="/Thanks"
           method="POST" 
           data-netlify="true" 
           data-netlify-honeypot="bot-field"
-          action="/thanks"
           onSubmit="submit"
         >
-          <div type="hidden"><input name="bot-field"/></div>
+          <input 
+            type="hidden" 
+            name="bot-field"
+          />
           <input 
             type="email" 
             id="email" 
             placeholder="Email" required
             name="email" 
-            value="contact"
           />
           <textarea 
             type="text" 
             id="message" 
             placeholder="Your message" required
             name="message"
-            value="contact"
           ></textarea>
           <button className="contact__button" type="submit"> 
             <span>Send</span> 
