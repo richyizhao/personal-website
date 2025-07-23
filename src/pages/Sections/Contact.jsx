@@ -23,21 +23,20 @@ function Contact() {
           action="/thanks"
           onSubmit="submit"
         >
-          <input 
-            type="hidden" 
-            name="bot-field"
-          />
+          <div type="hidden"><input name="bot-field"/></div>
           <input 
             type="email" 
             id="email" 
             placeholder="Email" required
             name="email" 
+            value="contact"
           />
           <textarea 
             type="text" 
             id="message" 
             placeholder="Your message" required
-            name="message" 
+            name="message"
+            value="contact"
           ></textarea>
           <button className="contact__button" type="submit"> 
             <span>Send</span> 
