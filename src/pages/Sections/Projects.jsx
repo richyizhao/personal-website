@@ -35,6 +35,7 @@ import GoogleColaboratory from "/icons/GoogleColaboratory.svg";
 
 function Projects() {
   const projectsData = [
+    /*
     {
       title: "Construction Tool Lender",
       description: "Can lend their tools to others to earn money.",
@@ -57,6 +58,7 @@ function Projects() {
       codeLink: "https://github.com/richyizhao",
       demoLink: "https://www.youtube.com/",
     },
+    */
     {
       title: "Stock Manager",
       description: "Helps workers to manage storage inventory.",
@@ -100,9 +102,9 @@ function Projects() {
       title: "Rubbish Classifier Model",
       description: "Batch scan images for rubbish classification.",
       technologies: [
+        { name: "GoogleColaboratory", icon: GoogleColaboratory, textColor: "text-orange-500", backgroundColor: "bg-orange-500 bg-opacity-30" },
         { name: "Python", icon: Python, textColor: "text-yellow-500", backgroundColor: "bg-yellow-500 bg-opacity-30" },
         { name: "Pytorch", icon: Pytorch, textColor: "text-red-500", backgroundColor: "bg-red-500 bg-opacity-30" },
-        { name: "GoogleColaboratory", icon: GoogleColaboratory, textColor: "text-orange-500", backgroundColor: "bg-orange-500 bg-opacity-30" },
       ],
       image: placeholderImage,
       codeLink: "https://github.com/richyizhao",
