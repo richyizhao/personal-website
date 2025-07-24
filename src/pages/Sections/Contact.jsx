@@ -27,8 +27,12 @@ function Contact() {
         >
           <input 
             type="hidden" 
+            name="form-name" 
+            value="contact" 
+          />
+          <input 
+            type="hidden" 
             name="bot-field"
-            value="contact"
           />
           <input 
             type="email" 
