@@ -1,8 +1,11 @@
+import { useState } from "react";
+import { MapPin, Send } from "react-feather";
 import Footer from "../Components/Footer";
 
-import { MapPin, Send } from "react-feather";
-
 function Contact() {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  console.log(email, message);
   return (
     <section id="contact">
     <h2 className="section__title">CONTACT</h2>
@@ -21,23 +24,27 @@ function Contact() {
           method="POST" 
           data-netlify="true" 
           data-netlify-honeypot="bot-field"
-          onSubmit="submit"
         >
           <input 
             type="hidden" 
             name="bot-field"
+            value="contact"
           />
           <input 
             type="email" 
             id="email" 
             placeholder="Email" required
             name="email" 
+            value={email} 
+            onChange={(e) => setEmail(e.target.value)} 
           />
           <textarea 
             type="text" 
             id="message" 
             placeholder="Your message" required
             name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)} 
           ></textarea>
           <button className="contact__button" type="submit"> 
             <span>Send</span> 
