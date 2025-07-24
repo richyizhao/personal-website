@@ -17,7 +17,7 @@ function Contact() {
         </div>
         <form 
           name="contact" 
-          action="/Thanks"
+          action="/thanks"
           method="POST" 
           data-netlify="true" 
           data-netlify-honeypot="bot-field"
