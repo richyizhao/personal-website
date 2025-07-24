@@ -1,64 +1,77 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { MapPin, Send } from "react-feather";
 import Footer from "../Components/Footer";
 
 function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  console.log(email, message);
+  const navigate = useNavigate();
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => navigate("/thanks"))
+      .catch((error) => alert(error));
+  };
+
   return (
     <section id="contact">
-    <h2 className="section__title">CONTACT</h2>
-    <div className="contact__card__containers">
-      <div className="contact__card">
-        <div className="contact__card__title">
-          <h3><span>Interested?</span> Lets talk!</h3>
-          <div>
-            <p className="location"><span>Auckland, </span>NZ</p>
-            <MapPin />
+      <h2 className="section__title">CONTACT</h2>
+      <div className="contact__card__containers">
+        <div className="contact__card">
+          <div className="contact__card__title">
+            <h3><span>Interested?</span> Let’s talk!</h3>
+            <div>
+              <p className="location"><span>Auckland, </span>NZ</p>
+              <MapPin />
+            </div>
           </div>
+
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={submitHandler}
+          >
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Your message"
+              required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+            ></textarea>
+
+            <button className="contact__button" type="submit">
+              <span>Send</span>
+              <Send />
+            </button>
+          </form>
         </div>
-        <form 
-          name="contact" 
-          action="/thanks"
-          method="POST" 
-          data-netlify="true" 
-          data-netlify-honeypot="bot-field"
-        >
-          <input 
-            type="hidden" 
-            name="form-name" 
-            value="contact" 
-          />
-          <input 
-            type="hidden" 
-            name="bot-field"
-          />
-          <input 
-            type="email" 
-            id="email" 
-            placeholder="Email" required
-            name="email" 
-            value={email} 
-            onChange={(e) => setEmail(e.target.value)} 
-          />
-          <textarea 
-            type="text" 
-            id="message" 
-            placeholder="Your message" required
-            name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)} 
-          ></textarea>
-          <button className="contact__button" type="submit"> 
-            <span>Send</span> 
-            <Send />
-          </button>
-        </form>
+        <Footer />
       </div>
-      <Footer />
-    </div>
-  </section>
+    </section>
   );
 }
 
