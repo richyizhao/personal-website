@@ -46,7 +46,9 @@ function Skills() {
         { name: "Figma", icon: Figma, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30" },
         { name: "Tailwind", icon: Tailwind, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
         { name: "React.js", icon: React, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
+        /*
         { name: "React Native", icon: React, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
+        */
         { name: "TypeScript.js", icon: TypeScript, textColor: "text-blue-500", backgroundColor: "bg-blue-500 bg-opacity-30" },
         /*
         { name: "Expo", icon: Expo, textColor: "text-indigo-500", backgroundColor: "bg-indigo-500 bg-opacity-30" },
