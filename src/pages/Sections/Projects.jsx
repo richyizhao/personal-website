@@ -3,7 +3,7 @@ import SkillTag from "../Components/SkillTag";
 import { Code, ExternalLink } from "react-feather";
 import placeholderImage from "/project-images/no-image-placeholder.jpg";
 
-import Figma from "/icons/Figma.svg"              // Project 1 Icons. Construction Tool Lender {Website}
+import Figma from "/icons/Figma.svg"              // Project 1 Icons. Construction Tool Lender {Web App}
 import Tailwind from "/icons/Tailwind.svg";
 import React from "/icons/React.svg";
 import TypeScript from "/icons/TypeScript.svg";
@@ -17,19 +17,19 @@ import PlayWright from "/icons/PlayWright.svg";
 import Docker from "/icons/Docker.svg";
 import AWS from "/icons/AWS.svg";
 
-import ASPNET from "/icons/ASPNET.svg";           // Project 2 Icons. Stock Manager {Website}
+import ASPNET from "/icons/ASPNET.svg";           // Project 2 Icons. Stock Manager {Web App}
 import SQLServer from "/icons/SQLServer.svg";
 import Azure from "/icons/Azure.svg";
 
-import Expo from "/icons/Expo.svg";               // Project 3 Icons. Appliance Energy Scanner {App}
+import Expo from "/icons/Expo.svg";               // Project 3 Icons. Appliance Energy Scanner {Mobile App}
 import Pytest from "/icons/Pytest.svg";
 import FastAPI from "/icons/FastAPI.svg";
 import Supabase from "/icons/Supabase.svg";
 import PostgreSQL from "/icons/PostgreSQL.svg";
-import PlayStore from "/icons/PlayStore.svg";
-import AppStore from "/icons/AppStore.svg";
 
-import Python from "/icons/Python.svg";           // Project 4 Icons. Rubbish Classifier Model {AI}
+import Electron from "/icons/Electron.svg";       // Project 4 Icons. Animal Classifier Model (Desktop App)
+
+import Python from "/icons/Python.svg";           // Project 5 Icons. Rubbish Classifier Model {AI}
 import Pytorch from "/icons/Pytorch.svg";
 import GoogleColaboratory from "/icons/GoogleColaboratory.svg";
 
@@ -37,7 +37,7 @@ function Projects() {
   const projectsData = [
     /*
     {
-      title: "Construction Tool Lender",
+      title: "Construction Tool Lender (Web)",
       description: "Can lend their tools to others to earn money.",
       technologies: [
         { name: "Figma", icon: Figma, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30" },
@@ -58,9 +58,8 @@ function Projects() {
       codeLink: "https://github.com/richyizhao",
       demoLink: "https://www.youtube.com/",
     },
-    */
     {
-      title: "Stock Manager",
+      title: "Stock Manager (Web)",
       description: "Helps workers to manage storage inventory.",
       technologies: [
         { name: "Figma", icon: Figma, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30" },
@@ -79,10 +78,11 @@ function Projects() {
       demoLink: "https://www.youtube.com/",
     },
     {
-      title: "Appliance Energy Scanner",
+      title: "Appliance Energy Scanner (Mobile)",
       description: "Batch scan images for solar energy needs.",
       technologies: [
         { name: "Figma", icon: Figma, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30" },
+        { name: "Tailwind", icon: Tailwind, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
         { name: "React Native", icon: React, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
         { name: "TypeScript.js", icon: TypeScript, textColor: "text-blue-500", backgroundColor: "bg-blue-500 bg-opacity-30" },
         { name: "Expo", icon: Expo, textColor: "text-indigo-500", backgroundColor: "bg-indigo-500 bg-opacity-30" },
@@ -91,15 +91,31 @@ function Projects() {
         { name: "PostgreSQL", icon: PostgreSQL, textColor: "text-blue-500", backgroundColor: "bg-blue-500 bg-opacity-30"},
         { name: "Jest", icon: Jest, textColor: "text-red-500", backgroundColor: "bg-red-500 bg-opacity-30"},
         { name: "Pytest", icon: Pytest, textColor: "text-yellow-500", backgroundColor: "bg-yellow-500 bg-opacity-30"},
-        { name: "PlayStore", icon: PlayStore, textColor: "text-yellow-500", backgroundColor: "bg-yellow-500 bg-opacity-30"},
-        { name: "AppStore", icon: AppStore, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30"},
+      ],
+      image: placeholderImage,
+      codeLink: "https://github.com/richyizhao",
+      demoLink: "https://www.youtube.com/",
+    },
+    */
+    {
+      title: "Animal Classifier Model (Desktop)",
+      description: "Batch scan images for solar energy needs.",
+      technologies: [
+        { name: "Figma", icon: Figma, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30" },
+        { name: "Electron", icon: Electron, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30"},
+        { name: "Tailwind", icon: Tailwind, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
+        { name: "React.js", icon: React, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
+        { name: "TypeScript.js", icon: TypeScript, textColor: "text-blue-500", backgroundColor: "bg-blue-500 bg-opacity-30" },
+        { name: "Node.js", icon: Node, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30" },
+        { name: "Jest", icon: Jest, textColor: "text-red-500", backgroundColor: "bg-red-500 bg-opacity-30"},
+        { name: "PlayWright", icon: PlayWright, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30"},
       ],
       image: placeholderImage,
       codeLink: "https://github.com/richyizhao",
       demoLink: "https://www.youtube.com/",
     },
     {
-      title: "Rubbish Classifier Model",
+      title: "Rubbish Classifier Model (AI)",
       description: "Batch scan images for rubbish classification.",
       technologies: [
         { name: "GoogleColaboratory", icon: GoogleColaboratory, textColor: "text-orange-500", backgroundColor: "bg-orange-500 bg-opacity-30" },

@@ -35,7 +35,7 @@ function Header() {
         <h1>Richard Zhao</h1>
         <h2>Full Stack Developer</h2>
         <p>
-          Forging robust web & mobile applications <br/>
+          Forging robust web, mobile & desktop apps <br/>
           for seamless user experience.
         </p>
       </div>

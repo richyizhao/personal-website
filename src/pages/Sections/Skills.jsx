@@ -44,18 +44,13 @@ function Skills() {
       description: "I have crafted responsive designs for web & mobile applications to enhance user interactivity and improve the overall user experience.",
       technologies: [
         { name: "Figma", icon: Figma, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30" },
-        /*
-        { name: "HTML", icon: Html, textColor: "text-orange-500", backgroundColor: "bg-orange-500 bg-opacity-30" },
-        { name: "CSS", icon: Css, textColor: "text-purple-500", backgroundColor: "bg-purple-500 bg-opacity-30" },
-        */
         { name: "Tailwind", icon: Tailwind, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
-        /*
-        { name: "JavaScript.js", icon: JavaScript, textColor: "text-yellow-500", backgroundColor: "bg-yellow-500 bg-opacity-30" },
-        */
         { name: "React.js", icon: React, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
         { name: "React Native", icon: React, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
         { name: "TypeScript.js", icon: TypeScript, textColor: "text-blue-500", backgroundColor: "bg-blue-500 bg-opacity-30" },
+        /*
         { name: "Expo", icon: Expo, textColor: "text-indigo-500", backgroundColor: "bg-indigo-500 bg-opacity-30" },
+        */
       ],
     },
     {
@@ -65,16 +60,12 @@ function Skills() {
         /*
         { name: "Node.js", icon: Node, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30" },
         { name: "Express.js", icon: Express, textColor: "text-indigo-500", backgroundColor: "bg-indigo-500 bg-opacity-30" },
-        */
         { name: "ASP.NET", icon: ASPNET, textColor: "text-blue-500", backgroundColor: "bg-blue-500 bg-opacity-30" },
         { name: "FastAPI", icon: FastAPI, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30" },
         { name: "Supabase", icon: Supabase, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30" },
-        /*
         { name: "MySQL", icon: MySQL, textColor: "text-yellow-500", backgroundColor: "bg-yellow-500 bg-opacity-30" },
-        */
         { name: "SQL Server", icon: SQLServer, textColor: "text-red-500", backgroundColor: "bg-red-500 bg-opacity-30" },
         { name: "PostgreSQL", icon: PostgreSQL, textColor: "text-blue-500", backgroundColor: "bg-blue-500 bg-opacity-30" },
-        /*
         { name: "Auth0", icon: Auth0, textColor: "text-orange-500", backgroundColor: "bg-orange-500 bg-opacity-30" },
         { name: "Stripe", icon: Stripe, textColor: "text-indigo-500", backgroundColor: "bg-indigo-500 bg-opacity-30" },
         */
@@ -86,12 +77,12 @@ function Skills() {
       technologies: [
         { name: "Jest", icon: Jest, textColor: "text-red-500", backgroundColor: "bg-red-500 bg-opacity-30" },
         { name: "PlayWright", icon: PlayWright, textColor: "text-green-500", backgroundColor: "bg-green-500 bg-opacity-30" },
+        /*
         { name: "Pytest", icon: Pytest, textColor: "text-yellow-500", backgroundColor: "bg-yellow-500 bg-opacity-30" },
         { name: "Docker", icon: Docker, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
-        /*
         { name: "AWS", icon: AWS, textColor: "text-yellow-500", backgroundColor: "bg-yellow-500 bg-opacity-30" },
-        */
         { name: "Azure", icon: Azure, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
+        */
       ],
     },
     {
@@ -102,7 +93,9 @@ function Skills() {
         { name: "Python", icon: Python, textColor: "text-yellow-500", backgroundColor: "bg-yellow-500 bg-opacity-30" },
         { name: "Pytorch", icon: Pytorch, textColor: "text-red-500", backgroundColor: "bg-red-500 bg-opacity-30" },
         { name: "VS Code", icon: VScode, textColor: "text-sky-500", backgroundColor: "bg-sky-500 bg-opacity-30" },
+        /*
         { name: "Visual Studio", icon: VStudio, textColor: "text-indigo-500", backgroundColor: "bg-indigo-500 bg-opacity-30" },
+        */
       ],
     },
   ];
